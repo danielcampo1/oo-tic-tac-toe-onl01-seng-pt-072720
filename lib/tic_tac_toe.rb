@@ -94,11 +94,8 @@ class TicTacToe
     false
   end
   
-  def over?
-    if won? || full?
-      return true
-    end
-    false
+def over?
+    won? || draw?
   end
   
   def winner
@@ -132,9 +129,9 @@ class TicTacToe
      end
        
      if won?
-        puts "Congratulations " + winner + ", You won!!"
+        puts "Congratulations " + winner + "!"
      elsif draw?
-        puts "Sorry, it ended in a draw."
+        puts "Cat's Game!"
      end
    end  
 end
